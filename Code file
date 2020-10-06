@@ -1,7 +1,4 @@
-# Ex1PP
-first exercice of programming projects
-
- try
+  try
         {
             //Getting The Image From The System
             OpenFileDialog open = new OpenFileDialog();
