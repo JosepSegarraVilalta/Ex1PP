@@ -1,25 +1,19 @@
-# Ex1PP
-first exercice of programming projects
+int main()
+{
+FILE *fp, *fp2;
 
- try
-        {
-            //Getting The Image From The System
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                System.IO.FileInfo file = new System.IO.FileInfo(open.FileName);
-                Bitmap img = new Bitmap(open.FileName);
+struct image {
+int header,size,date;
+} testimage, testimage2;
 
+int x;
+fp = fopen("","wb");
+printf("please enter the header value: ");
+scanf("%d", &testimage.header);
+printf("\nEnter the size value: ");
+scanf("%d", &testimage.size);
+printf("\nEnter the date value: ");
+scanf("%d, &testimage.date");
+fwrite(&testimage,sizeof(struct image), 1, fp);
+fclose(fp);
 
-                if (img.Width < MAX_WIDTH &&
-                    img.Height < MAX_HEIGHT &&
-                    file.Length < MAX_SIZE)
-                    pictureBox2.Image = img;
-
-            }
-        }
-        catch (Exception)
-        {
-            throw new ApplicationException("Failed loading image");
-        }
