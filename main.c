@@ -7,7 +7,7 @@ int header,size,date;
 } testimage, testimage2;
 
 int x;
-fp = fopen("C:\Users\josep\OneDrive\Imágenes\Saved Pictures\image","wb");
+fp = fopen("C:/Users/josep/OneDrive/Imágenes/Saved Pictures/image","wb");
 printf("please enter the header value: ");
 scanf("%d", &testimage.header);
 printf("\nEnter the size value: ");
